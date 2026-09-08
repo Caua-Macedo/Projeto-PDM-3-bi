@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Tela principal do Pedometer -->
+<!-- Layout simples: LinearLayout vertical, sem aninhamentos complicados -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+
+        android:padding="24dp">
+
+
+        <!-- ===== TOPO ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Pedometer"
+
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Monitoramento de atividade"
+
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+
+        <!-- ===== CARD PRINCIPAL: PASSOS ===== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center"
+
+            android:background="@drawable/bg_card"
+            android:padding="24dp"
+
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtPassos"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="0"
+
+                android:textSize="56sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="passos"
+
+                android:textSize="16sp"
+                android:textColor="@color/textSecondary"
+
+                android:layout_marginBottom="16dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressPassos"
+
+                style="?android:attr/progressBarStyleHorizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:max="10000"
+                android:progress="0"
+
+                android:progressTint="@color/primary"
+                android:progressBackgroundTint="@color/progressBackground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Meta: 10.000 passos"
+
+                android:textSize="12sp"
+                android:textColor="@color/textSecondary"
+
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ===== BLOCO DE INFORMAÇÕES ===== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+
+            android:layout_marginBottom="24dp">
+
+            <!-- Distância -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtDistancia"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="0,00 km"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Distância"
+
+                    android:textSize="12sp"
+                    android:textColor="@color/textSecondary"/>
+
+            </LinearLayout>
+
+            <!-- Calorias -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtCalorias"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="0 kcal"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Calorias"
+
+                    android:textSize="12sp"
+                    android:textColor="@color/textSecondary"/>
+
+            </LinearLayout>
+
+            <!-- Ritmo -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtRitmo"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="0 SPM"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Ritmo"
+
+                    android:textSize="12sp"
+                    android:textColor="@color/textSecondary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ===== BOTÕES ===== -->
+
+        <Button
+            android:id="@+id/btnTreino"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Iniciar treino"
+            android:textColor="@color/white"
+
+            android:backgroundTint="@color/primary"
+
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnEstatisticas"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Estatísticas"
+            android:textColor="@color/primary"
+
+            android:backgroundTint="@color/buttonSecondary"
+
+            android:layout_marginBottom="20dp"/>
+
+
+        <!-- ===== STATUS DO SENSOR ===== -->
+
+        <TextView
+            android:id="@+id/txtStatus"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="● Contador de passos ativo"
+
+            android:textSize="13sp"
+            android:textColor="@color/statusAtivo"
+
+            android:layout_marginBottom="16dp"/>
+
+
+        <!-- ===== ÁREA DE ESTATÍSTICAS (liga/desliga pelo botão) ===== -->
+
+        <TextView
+            android:id="@+id/txtEstatisticas"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text=""
+
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            android:lineSpacingExtra="4dp"
+
+            android:gravity="center"
+
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+
+            android:layout_marginBottom="16dp"/>
+
+
+        <!-- ===== GRÁFICO DE EVOLUÇÃO SEMANAL ===== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:background="@drawable/bg_card"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Evolução semanal"
+
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+
+                android:layout_marginBottom="8dp"/>
+
+            <com.example.activetrack.GraficoSemanalView
+                android:id="@+id/graficoSemanal"
+
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

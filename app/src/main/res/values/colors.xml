@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cor principal (azul moderno) -->
+    <color name="primary">#2F6FED</color>
+
+    <!-- Fundos -->
+    <color name="background">#F5F7FA</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="progressBackground">#E3E8F0</color>
+    <color name="buttonSecondary">#E8EDFB</color>
+
+    <!-- Textos -->
+    <color name="textPrimary">#1C1C1E</color>
+    <color name="textSecondary">#7A7F87</color>
+
+    <!-- Status -->
+    <color name="statusAtivo">#2FB380</color>
+
+    <!-- Utilitário -->
+    <color name="white">#FFFFFF</color>
+
+</resources>
